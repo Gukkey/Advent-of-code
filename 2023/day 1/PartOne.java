@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class day1 {
+public class PartOne {
     public static void main(String[] args) {
         int sum = 0;
         Scanner sc = new Scanner(System.in);
@@ -17,10 +17,10 @@ public class day1 {
         char lastValue = ' ';
         for (int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
-            if (Character.isDigit(c) && firstValue == ' ') {
-                firstValue = c;
-            }
-            if(Character.isDigit(c)){
+            if (Character.isDigit(c)) {
+                if(firstValue == ' '){
+                    firstValue = c;
+                }
                 lastValue = c;
             }
         }
