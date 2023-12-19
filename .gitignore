@@ -25,4 +25,4 @@ replay_pid*
 
 # intellij files
 .idea/
-Advent-of-code-solutions.iml
+*.iml
