@@ -23,12 +23,12 @@ public class PartOne {
         AtomicBoolean flag = new AtomicBoolean(true);
         String[] cubeSet = s.split("\\s*;\\s*");
         for (int i = 0; i < cubeSet.length; i++) {
-            //String[] cube = cubeSet[i].split("\\s*,\\s*");
+            // String[] cube = cubeSet[i].split("\\s*,\\s*");
             cubeSet[i].lines().flatMap(x -> Arrays.stream(x.split("\\s*,\\s*"))).forEach(y -> {
-                if(y.contains("blue") && Integer.parseInt(y.replaceAll("[^\\d]", "")) > blue
-                    || y.contains("green") && Integer.parseInt(y.replaceAll("[^\\d]", "")) > green
-                    || y.contains("red") && Integer.parseInt(y.replaceAll("[^\\d]", "")) > red){
-                        flag.set(false);
+                if (y.contains("blue") && Integer.parseInt(y.replaceAll("[^\\d]", "")) > blue
+                        || y.contains("green") && Integer.parseInt(y.replaceAll("[^\\d]", "")) > green
+                        || y.contains("red") && Integer.parseInt(y.replaceAll("[^\\d]", "")) > red) {
+                    flag.set(false);
                 }
             });
         }
